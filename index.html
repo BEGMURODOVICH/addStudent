@@ -14,12 +14,12 @@
     <header>
         <div class="container">
             <div class="input-group mb-3 pt-3">
-                <input type="text" class="form-control" placeholder="Searching..." aria-label="Searching..." aria-describedby="basic-addon2">
+                <input type="text" class="form-control searchStudent" placeholder="Searching..." aria-label="Searching..." aria-describedby="basic-addon2">
                 <span class="input-group-text" id="basic-addon2">
                     <select class="form-select groups-filter" aria-label="Default select example">
                       </select>
                 </span>
-                <button class="btn btn-outline-success" type="submit" id="button-addon2" data-bs-toggle="modal" data-bs-target="#studentModal">Student Add</button>
+                <button class="btn btn-outline-success open-modal-btn" type="submit" id="button-addon2" data-bs-toggle="modal" data-bs-target="#studentModal">Student Add</button>
 
                 <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -27,7 +27,7 @@
 
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Student adding</h1>
+                                    <h1 class="modal-title fs-5 title-modal" id="exampleModalLabel">Adding student</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -47,13 +47,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="col">
-                                        <label for="validationCustom03" class="form-label">City</label>
-                                        <input type="text" class="form-control" id="validationCustom03" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid city.
-                                        </div>
-                                    </div>
                                     <div class="col">
                                         <label for="validationCustom04" class="form-label">Group</label>
                                         <select class="form-select modalSelect group" id="validationCustom04 group" name="group" required>
@@ -80,7 +73,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Add</button>
+                                    <button type="submit" class="btn btn-primary edit-btn">Add</button>
                         </form>
                         </div>
                         </div>
@@ -89,7 +82,7 @@
 
 
             </div>
-            <table class="table table-hover" id="studentsTable">
+            <table class="table table-hover studentsTable lg" id="studentsTable">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -101,17 +94,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>N1</td>
-                        <td>Now</td>
-                        <td>
-                            <button type="button" class="btn btn-success">Edit</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
 
                 </tbody>
             </table>
